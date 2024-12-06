@@ -39,6 +39,8 @@ body {
     --destructive-foreground: 169 10% 97.4%;
 
     --ring: 169 100% 48%;
+
+    --radius: 6px;
   }
 }
 
