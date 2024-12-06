@@ -2,6 +2,7 @@ import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "../ui
 import type { Country } from "@/types/country";
 import Image from "next/image";
 import { Skeleton } from "../ui/skeleton";
+import { FileWarning } from "lucide-react";
 
 function Stat(header: string, content: string | number) {
   return (
@@ -16,9 +17,22 @@ function Stat(header: string, content: string | number) {
   );
 }
 
-export function Country({ country, isPending }: { country: Country, isPending?: boolean }) {
+export function Country({ country, isPending }: { country?: Country, isPending?: boolean }) {
   if (isPending) {
     return <Skeleton className="w-[800px] h-[322px] rounded-xl" />;
+  }
+
+  if (!country) {
+    return (
+      <Card className="bg-gradient p-4 size-full w-[800px] h-[322px]">
+        <Card className="w-full h-full p-8 flex flex-col items-center justify-center">
+            <div className="font-bold text-4xl flex items-center gap-2 text-red-400">
+              <FileWarning />  
+              Could not get this country!
+            </div>
+        </Card>
+      </Card>
+    );
   }
 
   return (
