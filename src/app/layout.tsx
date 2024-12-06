@@ -52,7 +52,7 @@ export default function RootLayout({
       >
         <div className="w-full flex flex-col items-center p-4">
           <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 dark:border-border max-w-[1200px]">
-            <NavigationMenu>
+            <NavigationMenu className="pb-2">
               <NavigationMenuList>
                 <NavigationMenuItem>
                   <Link href="/" legacyBehavior passHref>

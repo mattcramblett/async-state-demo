@@ -26,7 +26,7 @@ export function Country({ country }: { country: Country }) {
               <span>{country.name.common}</span>
             </div>
           </CardTitle>
-          <CardDescription>
+          <CardDescription className="h-16">
             {country.flags.alt}
           </CardDescription>
         </CardHeader>
