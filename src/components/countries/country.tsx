@@ -1,5 +1,6 @@
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "../ui/card";
 import type { Country } from "@/types/country";
+import Image from "next/image";
 
 function Stat(header: string, content: string | number) {
   return (
@@ -30,9 +31,12 @@ export function Country({ country }: { country: Country }) {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex flex-col gap-4">
-            {Stat("Region", country.subregion) }
-            {Stat("Population", country.population) }
+          <div className="flex justify-between w-full">
+            <div className="flex flex-col gap-4">
+              {Stat("Region", country.subregion) }
+              {Stat("Population", country.population) }
+            </div>
+            <Image className="opacity-80" src={country.flags.svg} width={200} height={200} alt={country.flags.alt} />
           </div>
         </CardContent>
       </Card>
