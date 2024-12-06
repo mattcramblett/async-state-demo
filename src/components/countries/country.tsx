@@ -1,6 +1,7 @@
 import { Card, CardHeader, CardTitle, CardContent, CardDescription } from "../ui/card";
 import type { Country } from "@/types/country";
 import Image from "next/image";
+import { Skeleton } from "../ui/skeleton";
 
 function Stat(header: string, content: string | number) {
   return (
@@ -15,7 +16,11 @@ function Stat(header: string, content: string | number) {
   );
 }
 
-export function Country({ country }: { country: Country }) {
+export function Country({ country, isPending }: { country: Country, isPending?: boolean }) {
+  if (isPending) {
+    return <Skeleton className="w-[800px] h-[322px] rounded-xl" />;
+  }
+
   return (
     <Card className="bg-gradient p-4 size-full">
       <Card className="w-full h-full">
