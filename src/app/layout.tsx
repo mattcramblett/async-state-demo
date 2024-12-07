@@ -33,12 +33,19 @@ type NavLink = {
   label: string,
 }
 
-const NUM_PARTS = 5;
+//const NUM_PARTS = 5;
+//
+//const LINKS: NavLink[] = Array.from(new Array(NUM_PARTS).keys()).map(idx => ({
+//  path: `/part-${idx + 1}`,
+//  label: `Part ${idx + 1}`,
+//}));
 
-const LINKS: NavLink[] = Array.from(new Array(NUM_PARTS).keys()).map(idx => ({
-  path: `/part-${idx + 1}`,
-  label: `Part ${idx + 1}`,
-}));
+const LINKS = [
+  {
+    path: "/countries",
+    label: "Countries",
+  }
+]
 
 export default function RootLayout({
   children,
