@@ -28,11 +28,6 @@ export const metadata: Metadata = {
   description: "Async state demo",
 };
 
-type NavLink = {
-  path: string,
-  label: string,
-}
-
 //const NUM_PARTS = 5;
 //
 //const LINKS: NavLink[] = Array.from(new Array(NUM_PARTS).keys()).map(idx => ({
