@@ -36,7 +36,7 @@ export function Country({ country, error, isPending }: { country?: Country, erro
   }
 
   return (
-    <Card className="bg-gradient p-4 size-full">
+    <Card className="bg-gradient p-4 max-w-[800px] max-h-[322px]">
       <Card className="w-full h-full">
         <CardHeader>
           <CardTitle>
