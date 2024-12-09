@@ -23,7 +23,7 @@ export default function Page() {
         currentSelection={selection}
         onChangeSelection={(s) => setSelection(s)}
       />
-      {data && <Country country={data} />}
+      {<Country country={data} />}
     </>
   );
 }

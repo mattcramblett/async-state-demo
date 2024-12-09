@@ -22,7 +22,7 @@ export function Country({ country, error, isPending }: { country?: Country, erro
     return <Skeleton className="w-[800px] h-[322px] rounded-xl" />;
   }
 
-  if (error || !country) {
+  if (error) {
     return (
       <Card className="bg-gradient p-4 size-full w-[800px] h-[322px]">
         <Card className="w-full h-full p-8 flex flex-col items-center justify-center">
@@ -34,7 +34,11 @@ export function Country({ country, error, isPending }: { country?: Country, erro
       </Card>
     );
   }
-
+  
+  if (!country) {
+    return null;
+  }
+  
   return (
     <Card className="bg-gradient p-4 max-w-[800px] max-h-[322px]">
       <Card className="w-full h-full">
